@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07110a"><title>FoodBase — Every Bite Has a Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="welcome" class="welcome">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="welcome-head"><div class="logo-mark">F<span>✳</span></div><span class="micro">EVERY BITE HAS A STORY</span></header>
+  <main class="welcome-main">
+    <div class="welcome-symbol">🥗</div><p class="eyebrow" data-t="welcomeEyebrow">أهلًا بيك في FoodBase</p>
+    <h1 data-t="welcomeTitle">طعامك، بشكل أذكى.</h1>
+    <p class="welcome-copy" data-t="welcomeCopy">اكتشف أكلك، افهم قيمته الغذائية، وخلي اختياراتك أذكى كل يوم.</p>
+    <label for="langAr" class="field-label" data-t="languageLabel">اختار اللغة / Choose your language</label>
+    <div class="language-picks">
+      <button id="langAr" class="lang-pick chosen" data-lang="ar"><span class="lang-icon">ع</span><span><b>العربية</b><small>Arabic</small></span><span class="tick">✓</span></button>
+      <button class="lang-pick" data-lang="en"><span class="lang-icon">EN</span><span><b>English</b><small>English</small></span><span class="tick">✓</span></button>
+    </div>
+    <form id="welcomeForm"><label for="nameInput" class="field-label" data-t="nameLabel">اسمك إيه؟</label>
+      <div class="name-entry"><span>✦</span><input id="nameInput" maxlength="32" required data-ph="namePlaceholder" placeholder="اكتب اسمك هنا"><button class="enter-btn" type="submit" aria-label="Continue">←</button></div>
+      <p class="privacy" data-t="privacy">اسمك بيتحفظ على جهازك بس علشان نرحب بيك.</p>
+    </form>
+  </main>
+  <footer class="welcome-foot"><span>FOODBASE © 2026</span><span>EVERY BITE HAS A STORY</span></footer>
+</section>
+
+<div id="site" class="site hidden">
+  <aside id="sidebar" class="sidebar">
+    <div class="brand"><div class="logo-mark">F<span>✳</span></div><div>Food<span>Base</span><small>EVERY BITE HAS A STORY</small></div></div>
+    <button class="nav active" data-view="discover"><span>⌂</span><span data-t="discover">الرئيسية</span></button>
+    <button class="nav" data-view="favorites"><span>♡</span><span data-t="favorites">المفضلة</span><i id="favCount">0</i></button>
+    <button class="nav" data-view="compare"><span>⇄</span><span data-t="compare">مقارنة الأطعمة</span></button>
+    <p class="side-label categories-label" data-t="categories">الأقسام</p><div id="sideCategories" class="side-categories"></div>
+    <div class="side-bottom"><div class="tip"><b>✦ <span data-t="smartTip">اختيارات أذكى كل يوم</span></b><p data-t="tipCopy">القيم الغذائية تقديرية وقد تختلف حسب الوصفة.</p></div><button id="switchLang" class="switch-lang">◎ <span data-t="changeLang">تغيير اللغة</span><span>↗</span></button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button id="mobileMenu" class="mobile-menu">☰</button>
+      <a class="brand top-brand" href="#home"><span class="brand-leaf">❧</span><span>Food<span>Base</span><small>Every Bite Has a Story.</small></span></a>
+      <div class="top-search"><span>⌕</span><input id="search" type="search" data-ph="searchPlaceholder" placeholder="ابحث عن أي طعام..."></div>
+      <nav class="top-links"><a href="#about" data-t="aboutLink">حول الموقع ⓘ</a><a href="#articles" data-t="articlesLink">المقالات ▤</a><a href="#calculator" data-t="calculatorLink">حاسبة التغذية ▦</a><a href="#categories" data-t="categoriesLink">الأقسام ⠿</a></nav>
+      <button id="topLang" class="top-lang">EN</button>
+      <button class="home-pill" data-view="discover" data-t="home">الرئيسية⌂</button>
+      <button class="user-pill" id="editName"><span id="avatar">F</span><span id="greeting">أهلًا!</span></button>
+    </header>
+    <section id="discoverView" class="view">
+      <section class="hero hero-reference" id="home">
+        <div class="hero-copy-wrap">
+          <div class="hero-kicker"><i></i><span data-t="heroKicker">موسوعة طعامك اليومية</span></div>
+          <h1><span data-t="hero1">كل لقمة لها</span><br><em data-t="hero2">حكاية.</em></h1>
+          <h2 class="hero-slogan">Eat <b>Smart.</b> Live <b>Strong.</b></h2>
+          <p data-t="heroText">معلومات غذائية دقيقة.. لحياة أكثر صحة</p>
+          <button class="start-button" id="startExplore" data-t="startNow">ابدأ الآن ←</button>
+        </div>
+        <div class="hero-art"><div class="hero-food-badge"><b>+1000</b><span data-t="foodCountBadge">صنف غذائي</span></div></div>
+      </section>
+
+      <section class="category-showcase" id="categories">
+        <button class="category-tile supplements" data-category="proteinCat"><span>🧴</span><b data-t="supplementsTitle">البروتينات والمكملات</b><small>Supplements</small></button>
+        <button class="category-tile health" data-category="health"><span>💗</span><b data-t="healthTitle">التغذية حسب الحالة الصحية</b><small>Health Nutrition</small></button>
+        <button class="category-tile cutting" data-category="cutting"><span>🔥</span><b data-t="cuttingTitle">التنشيف</b><small>Cutting</small></button>
+        <button class="category-tile bulking" data-category="bulking"><span>🏋️</span><b data-t="bulkingTitle">التضخيم</b><small>Bulking</small></button>
+        <button class="category-tile allfoods" data-category="all"><span>🍴</span><b data-t="allFoodsTitle">جميع الأكلات</b><small>All Foods</small></button>
+        <button class="category-tile fruit" data-category="fruit"><span>🍓</span><b data-t="fruitTitle">الفواكه</b><small>Fruits</small></button>
+        <button class="category-tile vegetables" data-category="vegetables"><span>🥦</span><b data-t="vegetablesTitle">الخضروات</b><small>Vegetables</small></button>
+        <button class="category-tile carbs" data-category="carbs"><span>🍚</span><b data-t="carbsTitle">الكربوهيدرات</b><small>Carbohydrates</small></button>
+        <button class="category-tile drinks" data-category="drinks"><span>🥤</span><b data-t="drinksTitle">المشروبات</b><small>Beverages</small></button>
+        <button class="category-tile sweets" data-category="sweets"><span>🍰</span><b data-t="sweetsTitle">السكريات والحلويات</b><small>Sweets & Sugars</small></button>
+      </section>
+
+      <section id="healthGuide" class="health-guide hidden" aria-live="polite">
+        <div class="section-head"><div><p class="eyebrow">HEALTH & NUTRITION</p><h2 data-t="healthTitle">التغذية حسب الحالة الصحية</h2><p class="muted" data-ar="معلومات عامة تساعدك تفهم دور الأكل، وليست تشخيصًا أو علاجًا." data-en="General information about food choices, not diagnosis or treatment.">معلومات عامة تساعدك تفهم دور الأكل، وليست تشخيصًا أو علاجًا.</p></div></div>
+        <div class="health-grid">
+          <article class="health-card"><span>🩸</span><h3 data-ar="السكري" data-en="Diabetes">السكري</h3><p data-ar="انتبه لحجم الحصة ومجموع الكربوهيدرات، وفضّل الأطعمة الغنية بالألياف مثل الخضروات والبقول والحبوب الكاملة. احتياجات كل شخص تختلف." data-en="Pay attention to portion size and total carbohydrates. Fiber-rich vegetables, legumes and whole grains can be useful choices. Individual needs vary.">انتبه لحجم الحصة ومجموع الكربوهيدرات، وفضّل الأطعمة الغنية بالألياف مثل الخضروات والبقول والحبوب الكاملة. احتياجات كل شخص تختلف.</p></article>
+          <article class="health-card"><span>❤️</span><h3 data-ar="صحة القلب" data-en="Heart health">صحة القلب</h3><p data-ar="التوازن مهم: نوّع الخضروات والفاكهة والحبوب الكاملة، واختر الدهون غير المشبعة غالبًا، وقلل الأطعمة شديدة المعالجة." data-en="Aim for variety: vegetables, fruit and whole grains; choose unsaturated fats more often and limit highly processed foods.">التوازن مهم: نوّع الخضروات والفاكهة والحبوب الكاملة، واختر الدهون غير المشبعة غالبًا، وقلل الأطعمة شديدة المعالجة.</p></article>
+          <article class="health-card"><span>🧂</span><h3 data-ar="ضغط الدم" data-en="Blood pressure">ضغط الدم</h3><p data-ar="راقب الصوديوم الموجود في الملح والمخللات والوجبات المصنعة. لا توقف دواءً أو تغيّر علاجك اعتمادًا على معلومات الموقع." data-en="Be aware of sodium in salt, pickles and packaged meals. Never change or stop medication based on this website.">راقب الصوديوم الموجود في الملح والمخللات والوجبات المصنعة. لا توقف دواءً أو تغيّر علاجك اعتمادًا على معلومات الموقع.</p></article>
+          <article class="health-card"><span>🫀</span><h3 data-ar="الكوليسترول والدهون" data-en="Cholesterol and fats">الكوليسترول والدهون</h3><p data-ar="الألياف الذائبة الموجودة في الشوفان والبقول قد تساعد ضمن نمط غذائي متوازن، واستبدال بعض الدهون المشبعة بغير المشبعة خيار مفيد عمومًا." data-en="Soluble fiber in oats and legumes can help as part of a balanced eating pattern. Replacing some saturated fats with unsaturated fats is generally helpful.">الألياف الذائبة الموجودة في الشوفان والبقول قد تساعد ضمن نمط غذائي متوازن، واستبدال بعض الدهون المشبعة بغير المشبعة خيار مفيد عمومًا.</p></article>
+          <article class="health-card"><span>🩺</span><h3 data-ar="أمراض الكلى" data-en="Kidney conditions">أمراض الكلى</h3><p data-ar="احتياجات البروتين والبوتاسيوم والفوسفور والسوائل تختلف حسب الحالة ونتائج التحاليل؛ لا تتبع قائمة منع عامة دون مختص." data-en="Protein, potassium, phosphorus and fluid needs depend on the condition and lab results. Do not follow a generic restriction list without a clinician.">احتياجات البروتين والبوتاسيوم والفوسفور والسوائل تختلف حسب الحالة ونتائج التحاليل؛ لا تتبع قائمة منع عامة دون مختص.</p></article>
+          <article class="health-card"><span>🥗</span><h3 data-ar="التغذية المتوازنة" data-en="Balanced nutrition">التغذية المتوازنة</h3><p data-ar="اجعل وجباتك متنوعة وتضم مصادر بروتين وخضروات أو فاكهة وحبوبًا أو نشويات، مع شرب الماء بانتظام." data-en="Build variety into meals with protein sources, vegetables or fruit, grains or starches, and regular water intake.">اجعل وجباتك متنوعة وتضم مصادر بروتين وخضروات أو فاكهة وحبوبًا أو نشويات، مع شرب الماء بانتظام.</p></article>
+        </div>
+        <p class="health-note" data-ar="تنبيه: هذه معلومات تثقيفية عامة فقط. لو عندك حالة صحية أو بتاخد علاج، راجع طبيبًا أو أخصائي تغذية مؤهل قبل تغيير أكلك." data-en="Note: Educational information only. If you have a health condition or take medication, consult a qualified clinician or dietitian before changing your diet.">تنبيه: هذه معلومات تثقيفية عامة فقط. لو عندك حالة صحية أو بتاخد علاج، راجع طبيبًا أو أخصائي تغذية مؤهل قبل تغيير أكلك.</p>
+      </section>
+
+      <section class="featured-layout">
+        <div class="popular-panel">
+          <div class="panel-heading"><h2><span>⭐</span><span data-t="popularTitle">أشهر الأكلات</span></h2><button id="showAllFoods" data-t="showAll">عرض الكل ←</button></div>
+          <div id="foodGrid" class="food-grid"></div>
+        </div>
+        <aside class="calculator-panel" id="calculator">
+          <div class="calc-title"><span class="calc-icon">▦</span><div><h2 data-t="smartCalc">حاسبة التغذية الذكية</h2><p data-t="calcSub">أدخل القيم المطلوبة لحساب الطاقة</p></div></div>
+          <div class="calc-tabs"><button class="active" data-calc="macros" data-t="byMacros">حسب الماكروز</button><button data-calc="weight" data-t="byWeight">حسب الوزن</button><button data-calc="goal" data-t="byGoal">حسب الهدف</button></div>
+          <div class="macro-row"><label for="proteinInput">💪 <span data-t="proteinQuestion">كم جرام بروتين؟</span></label><input id="proteinInput" type="number" min="0" max="1000" placeholder="مثال: 120" value="120"></div>
+          <div class="macro-row"><label for="carbsInput">🌾 <span data-t="carbsQuestion">كم جرام كربوهيدرات؟</span></label><input id="carbsInput" type="number" min="0" max="1000" placeholder="مثال: 200" value="200"></div>
+          <div class="macro-row"><label for="fatInput">💧 <span data-t="fatQuestion">كم جرام دهون؟</span></label><input id="fatInput" type="number" min="0" max="1000" placeholder="مثال: 60" value="60"></div>
+          <button id="calculateMacros" class="calc-submit" data-t="calculateCalories">احسب السعرات ▦</button>
+          <div class="calc-result"><div class="calorie-total"><b id="macroCalories">1,820</b><span data-t="calorieUnit">سعرة حرارية</span></div><div class="macro-breakdown"><span><b id="proteinKcal">480</b><small data-t="proteinLabel">البروتين</small></span><span><b id="carbsKcal">800</b><small data-t="carbsLabel">الكربوهيدرات</small></span><span><b id="fatKcal">540</b><small data-t="fat">الدهون</small></span></div><div class="macro-donut" aria-hidden="true"></div></div>
+          <p class="calc-note" data-t="calcNote">الحساب تقديري للطاقة من الماكروز المدخلة، وليس خطة غذائية شخصية.</p>
+        </aside>
+      </section>
+
+      <section class="database-panel" id="database">
+        <div class="section-head"><div><p class="eyebrow">EXPLORE THE DATABASE</p><h2 data-t="exploreFoods">اكتشف الأطعمة</h2><p class="muted" data-t="exploreSub">دور على أكلك المفضل واعرف تفاصيله الغذائية.</p></div><div class="count"><b id="resultCount">0</b> <span data-t="results">نتيجة</span></div></div>
+        <div class="toolbar"><div class="search"><span>⌕</span><input id="searchMirror" type="search" data-ph="searchPlaceholder" placeholder="ابحث عن أي طعام..."><kbd>⌘ K</kbd></div><select id="sort"><option value="featured" data-t="sortFeatured">ترتيب مقترح</option><option value="calories" data-t="sortCalories">الأقل سعرات</option><option value="protein" data-t="sortProtein">الأعلى بروتين</option><option value="name" data-t="sortName">الاسم أبجديًا</option></select></div>
+        <div id="chips" class="chips"></div><div id="databaseGrid" class="food-grid"></div><div id="noResults" class="empty hidden"><span>🍽️</span><h3 data-t="noResults">ملقيناش الأكلة دي</h3><p data-t="noResultsText">جرّب كلمة تانية أو اختار قسم مختلف.</p></div>
+      </section>
+      <section class="trust-strip"><div>🛡️ <b data-t="trustedInfo">معلومات موثوقة</b><small data-t="globalSources">من مصادر عالمية</small></div><div>🌐 <b><span id="trustFoodCount">0</span> صنف</b><small data-t="foodAndDrinks">من الأكلات والمشروبات</small></div><div>⚡ <b data-t="fastInterface">واجهة سريعة</b><small data-t="easyUse">وسهلة الاستخدام</small></div><div>💚 <b data-t="betterChoices">اختيارات أفضل</b><small data-t="healthyLife">لحياة أكثر وعيًا</small></div></section>
+      <section class="plans-banner" id="articles"><div><h2 data-t="plansTitle">معلومات غذائية تساعدك تفهم اختياراتك</h2><p data-t="plansSub">تعرف على التغذية المتوازنة والعادات الصحية.</p></div><span>🥬　🏋️</span></section>
+    </section>
+    <section id="favoritesView" class="view hidden"><div class="page-title"><p class="eyebrow">YOUR COLLECTION</p><h1 data-t="favoritesTitle">الأطعمة المفضلة</h1><p class="muted" data-t="favoritesSub">كل الأكلات اللي حفظتها في مكان واحد.</p></div><div id="favoritesGrid" class="food-grid"></div><div id="favoritesEmpty" class="empty"><span>♡</span><h3 data-t="favoritesEmpty">لسه مفيش مفضلة</h3><p data-t="favoritesEmptyText">اضغط على القلب في أي أكلة علشان تحفظها هنا.</p></div></section>
+    <section id="compareView" class="view hidden"><div class="page-title"><p class="eyebrow">FOOD SIDE BY SIDE</p><h1 data-t="compareTitle">قارن بين الأطعمة</h1><p class="muted" data-t="compareSub">اختار صنفين وقارن القيم الغذائية لكل 100 جرام.</p></div><div class="compare-selects"><label><span data-t="foodOne">الأكلة الأولى</span><select id="foodA"></select></label><label><span data-t="foodTwo">الأكلة الثانية</span><select id="foodB"></select></label></div><div id="compareResult" class="compare-result"></div><p class="disclaimer" data-t="disclaimer">القيم تقديرية لكل 100 جرام، وقد تختلف حسب المكونات وطريقة التحضير.</p></section>
+    <footer class="footer"><span>FOODBASE <b>✳</b></span><span data-t="footerText">اعرف أكلك. اختار بوعي.</span><span class="creator-badge" aria-label="Made by Ahmed Mohamed Saadi Khalifa">✦ Made by <strong>Ahmed Mohamed Saadi Khalifa</strong></span><button id="editNameFooter" data-t="editName">تغيير الاسم</button></footer>
+  </main>
+</div>
+<div id="modal" class="modal-bg hidden" role="dialog" aria-modal="true"><article class="modal"><button id="closeModal" class="close-modal">×</button><div id="modalContent"></div></article></div><div id="toast" class="toast"></div>
+<script src="script.js"></script>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id);
+ const words={ar:{aboutLink:'حول الموقع ⓘ',articlesLink:'المقالات ▤',calculatorLink:'حاسبة التغذية ▦',categoriesLink:'الأقسام ⠿',startNow:'ابدأ الآن ←',foodCountBadge:'صنف غذائي',supplementsTitle:'البروتينات والمكملات',healthTitle:'التغذية حسب الحالة الصحية',cuttingTitle:'التنشيف',bulkingTitle:'التضخيم',allFoodsTitle:'جميع الأكلات',fruitTitle:'الفواكه',vegetablesTitle:'الخضروات',carbsTitle:'الكربوهيدرات',drinksTitle:'المشروبات',sweetsTitle:'السكريات والحلويات',popularTitle:'أشهر الأكلات',showAll:'عرض الكل ←',smartCalc:'حاسبة التغذية الذكية',calcSub:'أدخل القيم المطلوبة لحساب الطاقة',byMacros:'حسب الماكروز',byWeight:'حسب الوزن',byGoal:'حسب الهدف',proteinQuestion:'كم جرام بروتين؟',carbsQuestion:'كم جرام كربوهيدرات؟',fatQuestion:'كم جرام دهون؟',calculateCalories:'احسب السعرات ▦',calorieUnit:'سعرة حرارية',calcNote:'الحساب تقديري للطاقة من الماكروز المدخلة، وليس خطة غذائية شخصية.',trustedInfo:'معلومات موثوقة',globalSources:'من مصادر عالمية',moreFoods:'أكثر من 1000 صنف',foodAndDrinks:'من الأكلات والمشروبات',fastInterface:'واجهة سريعة',easyUse:'وسهلة الاستخدام',betterChoices:'اختيارات أفضل',healthyLife:'لحياة أكثر وعيًا',plansTitle:'معلومات غذائية تساعدك تفهم اختياراتك',plansSub:'تعرف على التغذية المتوازنة والعادات الصحية.'},en:{aboutLink:'About ⓘ',articlesLink:'Articles ▤',calculatorLink:'Nutrition calculator ▦',categoriesLink:'Categories ⠿',startNow:'Explore now →',foodCountBadge:'food items',supplementsTitle:'Protein & supplements',healthTitle:'Health nutrition',cuttingTitle:'Cutting',bulkingTitle:'Bulking',allFoodsTitle:'All foods',fruitTitle:'Fruits',vegetablesTitle:'Vegetables',carbsTitle:'Carbohydrates',drinksTitle:'Beverages',sweetsTitle:'Sweets & sugars',popularTitle:'Popular foods',showAll:'View all →',smartCalc:'Smart nutrition calculator',calcSub:'Enter values to calculate energy',byMacros:'By macros',byWeight:'By weight',byGoal:'By goal',proteinQuestion:'Protein grams?',carbsQuestion:'Carbohydrate grams?',fatQuestion:'Fat grams?',calculateCalories:'Calculate calories ▦',calorieUnit:'kcal',calcNote:'This estimates energy from entered macros; it is not a personal meal plan.',trustedInfo:'Reliable information',globalSources:'From global sources',moreFoods:'1000+ items',foodAndDrinks:'Foods and beverages',fastInterface:'Fast interface',easyUse:'Easy to use',betterChoices:'Better choices',healthyLife:'For informed choices',plansTitle:'Nutrition information for smarter choices',plansSub:'Explore balanced nutrition and healthy habits.'}};
+ function translate(){document.querySelectorAll('[data-t]').forEach(el=>{let k=el.dataset.t;if(words[document.documentElement.lang||'ar']?.[k])el.textContent=words[window.lang||'ar'][k]});}document.querySelectorAll('[data-ar][data-en]').forEach(el=>{el.textContent=(window.lang||'ar')==='en'?el.dataset.en:el.dataset.ar;});
+ const calc=()=>{let p=Math.max(0,Number($('proteinInput').value)||0),c=Math.max(0,Number($('carbsInput').value)||0),f=Math.max(0,Number($('fatInput').value)||0);let pk=p*4,ck=c*4,fk=f*9,total=pk+ck+fk; $('proteinKcal').textContent=Math.round(pk).toLocaleString();$('carbsKcal').textContent=Math.round(ck).toLocaleString();$('fatKcal').textContent=Math.round(fk).toLocaleString();$('macroCalories').textContent=Math.round(total).toLocaleString();$('macroCalories').dataset.total=total;};
+ ['proteinInput','carbsInput','fatInput'].forEach(id=>$(id).addEventListener('input',calc));$('calculateMacros').addEventListener('click',calc);calc();
+ $('startExplore').addEventListener('click',()=>$('database').scrollIntoView({behavior:'smooth'}));$('showAllFoods').addEventListener('click',()=>$('database').scrollIntoView({behavior:'smooth'}));
+ document.querySelectorAll('.top-links a,.home-pill').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view){document.querySelector('[data-view="discover"]').click();}}));
+ $('editNameFooter').addEventListener('click',()=>$('editName').click());
+ const topSearch=$('search'),mirror=$('searchMirror');mirror.addEventListener('input',()=>{topSearch.value=mirror.value;topSearch.dispatchEvent(new Event('input'));});topSearch.addEventListener('input',()=>{if(mirror.value!==topSearch.value)mirror.value=topSearch.value;});
+ const observer=new MutationObserver(()=>translate());observer.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+ window.addEventListener('load',translate);translate();
+})();
+</script>
+</body></html>

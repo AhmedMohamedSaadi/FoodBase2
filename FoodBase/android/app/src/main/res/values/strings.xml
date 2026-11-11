@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FoodBase</string>
+    <string name="title_activity_main">FoodBase</string>
+    <string name="package_name">com.dervex.foodbase</string>
+    <string name="custom_url_scheme">com.dervex.foodbase</string>
+</resources>
